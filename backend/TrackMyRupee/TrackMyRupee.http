@@ -1,0 +1,6 @@
+@TrackMyRupee_HostAddress = http://localhost:5246
+
+GET {{TrackMyRupee_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

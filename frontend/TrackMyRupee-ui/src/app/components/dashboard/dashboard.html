@@ -1,0 +1,42 @@
+<h2>Dashboard</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Total Expense</h3>
+        <p>₹{{totalExpense}}</p>
+    </div>
+
+    <div class="card">
+        <h3>Monthly Expense</h3>
+        <p>₹{{monthlyExpense}}</p>
+    </div>
+
+    <div class="card">
+        <h3>Remaining Budget</h3>
+        <p>₹{{remainingBudget}}</p>
+    </div>
+
+</div>
+
+<h3>Recent Expenses</h3>
+
+<table *ngIf="expenses && expenses.length > 0">
+    <tr>
+        <th>Title</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Date</th>
+    </tr>
+
+    <tr *ngFor="let e of expenses">
+        <td>{{e.title}}</td>
+        <td>₹{{e.amount}}</td>
+        <td>{{e.category}}</td>
+        <td>{{e.date | date:'short'}}</td>
+    </tr>
+</table>
+
+<p *ngIf="!expenses || expenses.length === 0" style="color: #666; font-style: italic;">
+    No expenses to display.
+</p>

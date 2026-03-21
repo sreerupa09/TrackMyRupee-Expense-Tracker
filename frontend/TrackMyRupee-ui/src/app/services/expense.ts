@@ -13,4 +13,16 @@ export class ExpenseService {
   getExpenses(){
     return this.http.get<any[]>(this.api);
   }
+
+  deleteExpense(id:number){
+    return this.http.delete(`${this.api}/${id}`);
+  }
+
+  updateExpense(id:number, data:any){
+    return this.http.put(`${this.api}/${id}`, data);
+  }
+
+  getExpenseById(id:number){
+    return this.http.get(`${this.api}/${id}`);
+  }
 }

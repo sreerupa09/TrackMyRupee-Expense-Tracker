@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    color: rgb(230, 216, 226);
+     background-color: #030d1e;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(299.09, 80%, 16%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(241.45, 94%, 15%) 0, transparent 55%);
+}
+
+
